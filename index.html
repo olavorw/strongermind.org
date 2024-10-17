@@ -1,0 +1,169 @@
+<html>
+<head>
+    <title>Chat GPT Interface</title>
+    <style>
+	body {
+		font-family: Roboto;
+		background-color: #343541;
+		color: #d1d5db;
+		margin: 0;
+		padding: 0;
+	}
+
+	.chat-container {
+		margin: 20px auto;
+		border-radius: 10px;
+		padding: 20px;
+		margin-right:20px;
+		margin-left:20px;
+		background-color: #40414f;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+		height: 85vh;
+		overflow-y: auto;
+	}
+
+	.chat {
+		margin-bottom: 10px;
+	}
+
+	.chat-message {
+		border-radius: 10px;
+		padding: 10px 15px;
+		display: inline-block;
+		max-width: 75%;
+		margin-bottom: 10px;
+		word-wrap: break-word;
+	}
+
+	.bot-message {
+		background-color: #444654;
+		color: #d1d5db;
+		float: left;
+		clear: both;
+	}
+
+	.user-message {
+		background-color: #19c37d;
+		color: #fff;
+		float: right;
+		clear: both;
+	}
+
+	.user-input {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+		background-color: #2b2c37;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		position: absolute;
+	}
+
+	input[type="text"] {
+		flex: 1;
+		padding: 12px 15px;
+		border: none;
+		border-radius: 8px;
+		margin-right: 10px;
+		background-color: #3e3f4a;
+		color: #fff;
+	}
+
+	input[type="text"]::placeholder {
+		color: #a0a0a0;
+	}
+
+	button {
+		padding: 10px 20px;
+		background-color: #1e70c1;
+		color: #fff;
+		border: none;
+		border-radius: 8px;
+		cursor: pointer;
+		font-size: 14px;
+	}
+
+	button:hover {
+		background-color: #145a8c;
+	}
+
+	.chat-container::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	.chat-container::-webkit-scrollbar-track {
+		background-color: #2b2c37;
+	}
+
+	.chat-container::-webkit-scrollbar-thumb {
+		background-color: #19c37d;
+		border-radius: 4px;
+	}
+
+    </style>
+</head>
+<body>
+    <div class="chat-container" id="chatContainer">
+        <div class="chat">
+            <div class="chat-message bot-message">
+                <span class="message">Shut up olav</span>
+            </div>
+        </div>
+        <div class="user-input">
+            <input type="text" id="userInput" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script>
+        function addBotMessage(message) {
+            const chatContainer = document.getElementById('chatContainer');
+            const chat = chatContainer.querySelector('.chat');
+
+            const botMessage = document.createElement('div');
+            botMessage.classList.add('chat-message', 'bot-message');
+            botMessage.innerHTML = `<span class="message">${message}</span>`;
+            chat.appendChild(botMessage);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+		
+		function addUserMessage(message) {
+            const chatContainer = document.getElementById('chatContainer');
+            const chat = chatContainer.querySelector('.chat');
+
+            const botMessage = document.createElement('div');
+            botMessage.classList.add('chat-message', 'user-message');
+            botMessage.innerHTML = `<span class="message">${message}</span>`;
+            chat.appendChild(botMessage);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function getUserInput() {
+            return document.getElementById('userInput').value;
+        }
+
+        function clearUserInput() {
+            document.getElementById('userInput').value = '';
+        }
+
+        function sendMessage() {
+            const userInput = getUserInput();
+            if (userInput.trim() !== '') {
+                addUserMessage(userInput);
+                setTimeout(() => {
+                    addBotMessage('Just get better tbfr');
+                }, 1000);
+                clearUserInput();
+            }
+        }
+
+        document.getElementById('userInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>
