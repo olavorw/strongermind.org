@@ -137,7 +137,7 @@ button:focus {
 .scroller > span {
   position: absolute;
   top: 0;
-  animation: slide 4s infinite;
+  animation: slide 5s infinite;
   font-weight: bold;
   
 }
