@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Chat GPT Interface</title>
+    <title>Therapai</title>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="chat.css?v=1.0.0">
 </head>
@@ -8,7 +8,7 @@
     <div class="chat-container" id="chatContainer">
         <div class="chat">
             <div class="chat-message bot-message">
-                <span class="message">Shut up olav</span>
+                <span class="message">Hi! I'm therapai. What do you need help with?</span>
             </div>
         </div>
         <div class="user-input">
@@ -52,7 +52,7 @@
             if (userInput.trim() !== '') {
                 addUserMessage(userInput);
                 setTimeout(() => {
-                    addBotMessage('Just get better tbfr');
+                    addBotMessage('Test');
                 }, 1000);
                 clearUserInput();
             }
