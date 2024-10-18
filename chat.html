@@ -70,7 +70,7 @@
 				.then(data => {
 					try {
 						const jsonResponse = JSON.parse(data);
-						if (jsonResponse && jsonResponse[0] && jsonResponse[0].generated_text) {
+						if (jsonResponse && jsonResponse[0] && jsonResponse[0].response) {
 							const botMessage = jsonResponse[0].response;
 							addBotMessage(botMessage);
 						} else {
