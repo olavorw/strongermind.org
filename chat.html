@@ -5,6 +5,9 @@
 	<link rel="stylesheet" href="chat.css?v=1.0.2">
 </head>
 <body>
+	<div class="header">
+        <a href="#" class="delete-data-link" onclick="deleteChatHistory(chatId)">Delete Data</a>
+    </div>
     <div class="chat-container" id="chatContainer">
         <div class="chat">
             <div class="chat-message bot-message">
@@ -53,6 +56,27 @@
 
         function clearUserInput() {
             document.getElementById('userInput').value = '';
+        }
+		async function deleteChatHistory(chatId) {
+            try {
+                const response = await fetch('https://strongermind.olavorw.workers.dev/', {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Chat-ID': chatId
+                    }
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log('Chat history deleted successfully:', result.message);
+                } else {
+                    const error = await response.json();
+                    console.error('Failed to delete chat history:', error.error);
+                }
+            } catch (error) {
+                console.error('Error during deletion request:', error);
+            }
         }
 
         async function sendMessage() {

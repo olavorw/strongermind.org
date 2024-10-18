@@ -98,3 +98,27 @@ button:hover {
 	background-color: #19c37d;
 	border-radius: 4px;
 }
+
+.header {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.delete-data-link {
+    text-decoration: none;
+    color: #ff5252;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ff5252;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.delete-data-link:hover {
+    background-color: #ff5252;
+    color: #fff;
+}
