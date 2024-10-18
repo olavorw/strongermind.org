@@ -156,6 +156,13 @@ button:focus {
   }
 }
 
+.header {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
 .delete-data-link {
     text-decoration: none;
     color: #fff;
