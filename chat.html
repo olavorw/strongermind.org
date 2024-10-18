@@ -19,6 +19,7 @@
     <script>
         const chatId = localStorage.getItem('chatId') || generateChatId();
         localStorage.setItem('chatId', chatId);
+        console.log('Chat ID:', chatId); // Debugging: Log the chat ID to console
 
         function generateChatId() {
             return Math.random().toString(36).substring(2) + Date.now().toString(36);
