@@ -69,13 +69,14 @@
 				.then(response => response.text())
 				.then(data => {
 					try {
-						const jsonResponse = JSON.parse(data);
+						addBotMessage(data)
+						/*const jsonResponse = JSON.parse(data);
 						if (jsonResponse && jsonResponse[0] && jsonResponse[0].generated_text) {
 							const botMessage = jsonResponse[0].generated_text;
 							addBotMessage(botMessage);
 						} else {
 							addBotMessage("Error: Invalid response format.");
-						}
+						}*/
 					} catch (error) {
 						addBotMessage("Error: Unable to parse response.");
 					}
