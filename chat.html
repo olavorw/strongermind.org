@@ -2,7 +2,7 @@
 <head>
     <title>Therapai</title>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="chat.css?v=1.0.1">
+	<link rel="stylesheet" href="chat.css?v=1.0.2">
 </head>
 <body>
     <div class="chat-container" id="chatContainer">
@@ -50,7 +50,6 @@
         async function sendMessage() {
 			const userInput = getUserInput();
 			if (userInput.trim() !== '') {
-				// Disable input and button while processing
 				document.getElementById('userInput').disabled = true;
 				document.querySelector('button').disabled = true;
 
@@ -87,7 +86,7 @@
 					// Re-enable input and button once processing is complete
 					document.getElementById('userInput').disabled = false;
 					document.querySelector('button').disabled = false;
-					document.getElementById('userInput').focus(); // Set focus back to the input field
+					document.getElementById('userInput').focus();
 				});
 			}
 		}
