@@ -70,26 +70,29 @@
 		  console.log('All cookies deleted');
 		}
 		async function deleteChatHistory(chatId) {
-			deleteAllCookies()
-            try {
-                const response = await fetch('https://strongermind.olavorw.workers.dev/', {
-                    method: 'DELETE',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-Chat-ID': chatId
-                    }
-                });
+			if (confirm("Are you sure you want to do that?") == true) {
+				deleteAllCookies()
+				try {
+					const response = await fetch('https://strongermind.olavorw.workers.dev/', {
+						method: 'DELETE',
+						headers: {
+							'Content-Type': 'application/json',
+							'X-Chat-ID': chatId
+						}
+					});
 
-                if (response.ok) {
-                    const result = await response.json();
-                    console.log('Chat history deleted successfully:', result.message);
-                } else {
-                    const error = await response.json();
-                    console.error('Failed to delete chat history:', error.error);
-                }
-            } catch (error) {
-                console.error('Error during deletion request:', error);
-            }
+					if (response.ok) {
+						const result = await response.json();
+						console.log('Chat history deleted successfully:', result.message);
+					} else {
+						const error = await response.json();
+						alert('Failed to delete chat history:', error.error);
+					}
+				} catch (error) {
+					alert('Error during deletion request:', error);
+				}
+				alert("Data successfully deleted.")
+			}
         }
 
         async function sendMessage() {
