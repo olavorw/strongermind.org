@@ -48,37 +48,56 @@
         }
 
         async function sendMessage() {
-            const userInput = getUserInput();
-            if (userInput.trim() !== '') {
-                addUserMessage(userInput);
+			const userInput = getUserInput();
+			if (userInput.trim() !== '') {
+				// Disable input and button while processing
+				document.getElementById('userInput').disabled = true;
+				document.querySelector('button').disabled = true;
 
-                await fetch('https://strongermind.olavorw.workers.dev/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
+				addUserMessage(userInput);
+				clearUserInput();
+
+				await fetch('https://strongermind.olavorw.workers.dev/', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
 					mode: 'no-cors',
-                    body: JSON.stringify({
-                        'input': userInput
-                    })
-                })
-                .then(response => response.text())
-                .then(data => {
-                    addBotMessage(data);
-                })
-                .catch(error => {
-                    addBotMessage("Error: Unable to fetch response.");
-                });
+					body: JSON.stringify({
+						'input': userInput
+					})
+				})
+				.then(response => response.text())
+				.then(data => {
+					try {
+						const jsonResponse = JSON.parse(data);
+						if (jsonResponse && jsonResponse[0] && jsonResponse[0].generated_text) {
+							const botMessage = jsonResponse[0].generated_text;
+							addBotMessage(botMessage);
+						} else {
+							addBotMessage("Error: Invalid response format.");
+						}
+					} catch (error) {
+						addBotMessage("Error: Unable to parse response.");
+					}
+				})
+				.catch(error => {
+					addBotMessage("Error: Unable to fetch response.");
+				})
+				.finally(() => {
+					// Re-enable input and button once processing is complete
+					document.getElementById('userInput').disabled = false;
+					document.querySelector('button').disabled = false;
+					document.getElementById('userInput').focus(); // Set focus back to the input field
+				});
+			}
+		}
 
-                clearUserInput();
-            }
-        }
-
-        document.getElementById('userInput').addEventListener('keydown', function(event) {
-            if (event.key === 'Enter') {
-                sendMessage();
-            }
-        });
+		document.getElementById('userInput').addEventListener('keydown', function(event) {
+			if (event.key === 'Enter' && !document.getElementById('userInput').disabled) {
+				sendMessage();
+			}
+		});
     </script>
 </body>
 </html>
