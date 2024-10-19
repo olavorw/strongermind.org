@@ -11,6 +11,6 @@ if (isMobile) {
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'index.css?v=1.0.2';
+    link.href = 'index.css?v=1.0.3';
     head.appendChild(link);
 }
