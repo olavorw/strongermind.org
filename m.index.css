@@ -13,8 +13,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	text-align: center;
-	padding: 20px;
+	padding: 50px 20px;
 }
 .text-content {
     margin-top: 50px; /* Push text down */
@@ -24,6 +25,7 @@ body {
 .text-content h1 {
 	font-size: 2rem; /* Smaller font size for mobile */
 	color: #063d96;
+	margin-bottom: 10px;
 }
 
 .highlight {
@@ -31,9 +33,12 @@ body {
 }
 
 .text-content p {
-	margin-top: 15px;
-	font-size: 1rem; /* Adjusted for mobile */
+	margin-top: 20px;
+	font-size: 1em; /* Adjusted for mobile */
 	color: #0d2140;
+	word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
 .image-container {
@@ -51,7 +56,6 @@ body {
 		flex-direction: row;
 		justify-content: space-between;
 		text-align: left;
-		padding: 50px 100px;
 	}
 
 	.text-content {
@@ -74,6 +78,11 @@ button {
 	font-weight: 700;
 	cursor: pointer;
 	border: none;
+	border-radius: 50px;
+	background: #fff;
+	color: #43b9fa;
+	border: 2px solid #43b9fa;
+	text-align: center;
 }
 
 .twenty {
@@ -93,7 +102,7 @@ button {
 .button-box {
 	width: 250px;
 	height: 150px;
-	margin: 10px;
+	margin: 20px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
