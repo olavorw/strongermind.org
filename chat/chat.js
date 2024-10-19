@@ -1,18 +1,5 @@
 const chatId = localStorage.getItem('chatId') || generateChatId();
 localStorage.setItem('chatId', chatId);
-const response = await fetch('https://strongermind.olavorw.workers.dev/', {
-	method: 'REQUEST',
-	headers: {
-		'Content-Type': 'application/json',
-		'X-Chat-ID': chatId
-	}
-})
-	.then(response => response.text())
-	.then(data => {
-		
-	}
-
-
 
 function generateChatId() {
 	return Math.random().toString(36).substring(2) + Date.now().toString(36);
