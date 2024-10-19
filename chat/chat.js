@@ -8,6 +8,7 @@ function generateChatId() {
 
 function addBotMessage(message) {
 	const chatContainer = document.getElementById('chatContainer');
+	const scrollableDiv = document.getElementById('chat');
 	const chat = chatContainer.querySelector('.chat');
 
 	const botMessage = document.createElement('div');
@@ -15,10 +16,12 @@ function addBotMessage(message) {
 	botMessage.innerHTML = `<span class="message">${message}</span>`;
 	chat.appendChild(botMessage);
 	chatContainer.scrollTop = chatContainer.scrollHeight;
+	scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
 }
 
 function addUserMessage(message) {
 	const chatContainer = document.getElementById('chatContainer');
+	const scrollableDiv = document.getElementById('chat');
 	const chat = chatContainer.querySelector('.chat');
 
 	const userMessage = document.createElement('div');
@@ -26,6 +29,7 @@ function addUserMessage(message) {
 	userMessage.innerHTML = `<span class="message">${message}</span>`;
 	chat.appendChild(userMessage);
 	chatContainer.scrollTop = chatContainer.scrollHeight;
+	scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
 }
 
 function getUserInput() {
