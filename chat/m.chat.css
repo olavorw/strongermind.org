@@ -76,7 +76,7 @@ body {
     background-color: #2c372b;
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: calc(5vh + 10px);
     transform: translateX(-50%) translateY(5%);
     width: calc(98% - 20px);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
@@ -91,7 +91,7 @@ body {
     padding: calc(1.6% + 10px);
     background-color: #2c372b;
     position: absolute;
-    bottom: 0;
+    bottom: calc(1.9vh - 14px);
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 20px);
