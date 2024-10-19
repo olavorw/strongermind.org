@@ -8,50 +8,49 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 .chat-container {
-    border-radius: 25px;
-    padding: 2%;
+    border-radius: 15px;
+    padding: 5%;
     background-color: #404f42;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    height: 90vh;
-    width: 90%;
-    max-width: 75rem;
-    position: absolute;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .chat {
+    margin-top: 6%;
     margin-bottom: 2%;
     overflow-y: auto;
-    max-height: 94%; /* WARNING: You need this or messages will overflow! Don't remove this please! -Olav */
-    padding-right: 20px; /* Add padding to create a gap between the scrollbar and chat messages */
+    max-height: 85%;
 }
 
     .chat::-webkit-scrollbar {
-        width: 12px; /* Increase width for better visibility */
-        position: absolute;
-        right: -12px; /* Move scrollbar to the right of the chat */
+        width: 8px;
     }
 
     .chat::-webkit-scrollbar-track {
-        background-color: #404f42; /* Match background of chat container */
+        background-color: #404f42;
     }
 
     .chat::-webkit-scrollbar-thumb {
-        background-color: #2d382d; /* Match input field background */
+        background-color: #2d382d;
         border-radius: 30px;
-        border: 3px solid #404f42; /* Make border match chat container background */
+        border: 2px solid #404f42;
     }
 
 .chat-message {
-    border-radius: 10px;
-    padding: 1% 2%;
+    border-radius: 30px;
+    padding: 2% 4%;
     display: inline-block;
-    max-width: 90%;
+    max-width: 85%;
     margin-bottom: 2%;
     word-wrap: break-word;
-    font-size: 1.2rem;
+    font-size: 3rem;
     border: 2px solid #3fd152;
 }
 
@@ -73,33 +72,37 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1%;
+    padding: 3%;
     background-color: #2c372b;
     position: absolute;
-    bottom: 0;
     left: 50%;
-    transform: translateX(-50%) translateY(-41%);
+    bottom: 6%;
+    transform: translateX(-50%);
     width: 98%;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .user-input-footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Adjust the value to set the desired space between elements */
-    padding: 1%;
+    gap: 15px;
+    padding: 2%;
     background-color: #2c372b;
     position: absolute;
-    bottom: 0;
+    bottom: 3%;
     left: 50%;
     transform: translateX(-50%);
-    width: 98%;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
 }
 
     .user-input-footer a {
         color: #3fd152;
         text-decoration: none;
+        font-size: 2rem;
         transition: color 0.3s ease;
     }
 
@@ -109,13 +112,14 @@ body {
 
 input[type="text"] {
     flex: 1;
-    padding: 1.5% 2%;
+    padding: 2% 4%;
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     margin-right: 2%;
     background-color: #3e4a3f;
     color: #fff;
     border: 2px solid #3fd152;
+    font-size: 2.5rem;
 }
 
     input[type="text"]::placeholder {
@@ -123,13 +127,13 @@ input[type="text"] {
     }
 
 button {
-    padding: 1.5% 3%;
+    padding: 2% 5%;
     background-color: #3fd152;
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 2.5rem;
 }
 
     button:hover {
@@ -138,8 +142,8 @@ button {
 
 .header {
     position: absolute;
-    top: 15px;
-    right: 0px;
+    top: 5px;
+    right: 10px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -147,9 +151,9 @@ button {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.8rem;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 5px;
     border: 1px solid #fff;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
