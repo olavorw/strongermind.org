@@ -34,17 +34,17 @@ body {
 
     .text-content h1 {
         font-size: 3.5rem;
-        color: #063d96;
+        color: #38c7c7;
         margin-bottom: 10px;
     }
 
     .text-content p {
         margin-top: 20px;
         font-size: 1.1rem;
-        color: #0d2140;
+        color: #113c3c;
         line-height: 1.5;
         padding-bottom: 20px;
-        color: #05327a;
+        color: #227777;
     }
 
 .image-container {
@@ -66,15 +66,15 @@ button {
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    border: 2px solid #0288d1;
+    border: 2px solid;
     border-radius: 10px;
-    background: #063d96;
+    background: #38c7c7;
     color: white;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
     button:hover {
-        background-color: #026f9c;
+        background-color: #113c3c;
         transform: translateY(-5px);
     }
 
