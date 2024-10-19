@@ -105,7 +105,7 @@ button:focus {
 
     .image-container {
         max-width: 100%;
-        margin-left: 0;
+        margin-left: 10px;
     }
 
     .text-content h1 {
@@ -127,7 +127,7 @@ button:focus {
 .header {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 50px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -161,3 +161,36 @@ button:focus {
     width: 20%;
     height: 2px;
     border-radius: 999px
+}
+.scroller {
+    height: 1.2em;
+    line-height: 1.2em;
+    position: relative;
+    overflow: hidden;
+    width: 10em;
+}
+
+    .scroller > span {
+        position: absolute;
+        top: 0;
+        animation: slide 5s infinite;
+        font-weight: bold;
+    }
+
+@keyframes slide {
+    0% {
+        top: 0;
+    }
+
+    25% {
+        top: -1.2em;
+    }
+
+    50% {
+        top: -2.4em;
+    }
+
+    75% {
+        top: -3.6em;
+    }
+}
