@@ -43,6 +43,8 @@ body {
         font-size: 1.1rem;
         color: #0d2140;
         line-height: 1.5;
+        padding-bottom: 20px;
+        color: #05327a;
     }
 
 .image-container {
@@ -66,7 +68,7 @@ button {
     cursor: pointer;
     border: 2px solid #0288d1;
     border-radius: 10px;
-    background: #0288d1;
+    background: #063d96;
     color: white;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
