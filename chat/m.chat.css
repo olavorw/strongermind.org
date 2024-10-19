@@ -13,20 +13,20 @@ body {
 
 .chat-container {
     border-radius: 15px;
-    padding: 5%;
+    padding: calc(3% + 10px);
     background-color: #404f42;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    height: 100%;
-    width: 100%;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
     position: relative;
     overflow: hidden;
 }
 
 .chat {
-    margin-top: 6%;
-    margin-bottom: 2%;
+    margin-top: calc(4% + 5px);
+    margin-bottom: calc(1% + 5px);
     overflow-y: auto;
-    max-height: 85%;
+    max-height: calc(85% - 10px);
 }
 
     .chat::-webkit-scrollbar {
@@ -45,12 +45,12 @@ body {
 
 .chat-message {
     border-radius: 30px;
-    padding: 2% 4%;
+    padding: calc(1% + 5px) calc(3% + 5px);
     display: inline-block;
-    max-width: 85%;
-    margin-bottom: 2%;
+    max-width: calc(85% - 10px);
+    margin-bottom: calc(1% + 5px);
     word-wrap: break-word;
-    font-size: 3rem;
+    font-size: calc(2.5rem + 1vw);
     border: 2px solid #3fd152;
 }
 
@@ -72,13 +72,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3%;
+    padding: calc(2.5% + 15px);
     background-color: #2c372b;
     position: absolute;
     left: 50%;
-    bottom: 5vh;
-    transform: translateX(-50%);
-    width: 98%;
+    bottom: calc(5vh + 10px);
+    transform: translateX(-50%) translateY(5%);
+    width: calc(98% - 20px);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
@@ -87,14 +87,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    padding: 2%;
+    gap: calc(10px + 1%);
+    padding: calc(1.6% + 10px);
     background-color: #2c372b;
     position: absolute;
-    bottom: 2vh;
+    bottom: calc(1.9vh - 14px);
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: calc(100% - 20px);
     border-radius: 10px;
     text-align: center;
 }
@@ -102,7 +102,7 @@ body {
     .user-input-footer a {
         color: #3fd152;
         text-decoration: none;
-        font-size: 2rem;
+        font-size: calc(1.5rem + 1vw);
         transition: color 0.3s ease;
     }
 
@@ -112,14 +112,14 @@ body {
 
 input[type="text"] {
     flex: 1;
-    padding: 2% 4%;
+    padding: calc(1% + 5px) calc(3% + 5px);
     border: none;
     border-radius: 20px;
-    margin-right: 2%;
+    margin-right: calc(1% + 5px);
     background-color: #3e4a3f;
     color: #fff;
     border: 2px solid #3fd152;
-    font-size: 2.5rem;
+    font-size: calc(2rem + 1vw);
 }
 
     input[type="text"]::placeholder {
@@ -127,13 +127,13 @@ input[type="text"] {
     }
 
 button {
-    padding: 2% 5%;
+    padding: calc(1% + 5px) calc(3% + 5px);
     background-color: #3fd152;
     color: #fff;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 2.5rem;
+    font-size: calc(2rem + 1vw);
 }
 
     button:hover {
@@ -142,8 +142,8 @@ button {
 
 .header {
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: calc(5px + 1%);
+    right: calc(10px + 1%);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -151,9 +151,9 @@ button {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
-    font-size: 0.8rem;
+    font-size: calc(0.5rem + 1vw);
     cursor: pointer;
-    padding: 5px;
+    padding: calc(2px + 0.5%);
     border: 1px solid #fff;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
