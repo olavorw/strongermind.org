@@ -112,7 +112,7 @@ button {
 .header {
     position: absolute;
     top: 15px;
-    right: 0;
+    right: 10px;
     font-family: 'Roboto', sans-serif;
 }
 
