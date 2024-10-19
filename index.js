@@ -4,7 +4,7 @@ if (isMobile) {
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'm.index.css?v=1.0.5';
+    link.href = 'm.index.css?v=1.0.6';
     head.appendChild(link);
 } else {
     var head = document.getElementsByTagName('HEAD')[0];
