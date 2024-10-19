@@ -4,13 +4,13 @@ if (isMobile) {
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'm.index.css?v=1.0.9';
+    link.href = 'm.index.css?v=1.1.0';
     head.appendChild(link);
 } else {
     var head = document.getElementsByTagName('HEAD')[0];
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'index.css?v=1.0.5';
+    link.href = 'index.css?v=1.0.6';
     head.appendChild(link);
 }
