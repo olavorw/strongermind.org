@@ -1,6 +1,18 @@
 const chatId = localStorage.getItem('chatId') || generateChatId();
 localStorage.setItem('chatId', chatId);
-console.log('Chat ID:', chatId); // Debugging: Log the chat ID to console
+const response = await fetch('https://strongermind.olavorw.workers.dev/', {
+	method: 'REQUEST',
+	headers: {
+		'Content-Type': 'application/json',
+		'X-Chat-ID': chatId
+	}
+})
+	.then(response => response.text())
+	.then(data => {
+		
+	}
+
+
 
 function generateChatId() {
 	return Math.random().toString(36).substring(2) + Date.now().toString(36);
