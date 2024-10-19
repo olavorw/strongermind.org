@@ -4,7 +4,7 @@ if (isMobile) {
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'm.chat.css?v=1.0.9';
+    link.href = 'm.chat.css?v=1.1.0';
     head.appendChild(link);
 } else {
     var head = document.getElementsByTagName('HEAD')[0];
