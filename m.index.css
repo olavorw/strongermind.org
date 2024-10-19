@@ -15,6 +15,7 @@ body {
 
 /* Hero Section Styling */
 .hero-section {
+    margin-top: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,9 +50,11 @@ body {
 
 .image-container {
     margin-top: -2%;
+    text-align: center;
 }
 
 .image-container img {
+    text-align: center;
     max-width: 100%;
     height: auto;
     border-radius: 15px;
@@ -125,13 +128,16 @@ button:focus {
 
 /* Header and Link Styling */
 .header {
+    margin-bottom: 300px;
     position: absolute;
     top: 10px;
     right: 50px;
     font-family: 'Roboto', sans-serif;
+    text-align:center;
 }
 
 .delete-data-link {
+    text-align:center;
     text-decoration: none;
     color: #fff;
     font-weight: 500;
