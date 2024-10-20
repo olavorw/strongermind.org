@@ -10,7 +10,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #4b9b9b 0%, #628484 100%);
+    background: linear-gradient(135deg, #244242 0%, #4b9b9b 130%);
 }
 
 /* Hero Section Styling */
@@ -26,9 +26,9 @@ body {
 
 .text-content {
     margin-bottom: 30px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 15px rgba(0, 2, 0, 0.5);
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #2d5353;
     border-radius: 15px;
 }
 
@@ -41,11 +41,11 @@ body {
     .text-content p {
         margin-top: 20px;
         font-size: 1.1rem;
-        color: #113c3c;
+        color: #b3ffff;
         line-height: 1.5;
         padding-bottom: 20px;
         padding-right: 20px;
-        color: #227777;
+        color: #b3ffff;
     }
 
 .image-container {
@@ -101,6 +101,7 @@ button {
 
     .text-content {
         max-width: 45%;
+        background-color: #2d5353;
     }
 
     .image-container {
@@ -119,7 +120,7 @@ button {
 
 .delete-data-link {
     text-decoration: none;
-    color: #fff;
+    color: #b3ffff;
     font-weight: 500;
     font-size: 14px;
     cursor: pointer;
