@@ -1,0 +1,198 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #2c372b;
+    color: #d1dbd2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+}
+
+.chat-container {
+    border-radius: 15px;
+    padding: calc(3% + 10px);
+    background-color: #404f42;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.chat {
+    margin-top: calc(4% + 5px);
+    margin-bottom: calc(1% + 5px);
+    overflow-y: auto;
+    max-height: calc(85% - 10px);
+}
+
+    .chat::-webkit-scrollbar {
+        width: 1px;
+    }
+
+    .chat::-webkit-scrollbar-track {
+        background-color: #404f42;
+    }
+
+    .chat::-webkit-scrollbar-thumb {
+        background-color: #2d382d;
+        border-radius: 30px;
+        border: 2px solid #404f42;
+    }
+
+.chat-message {
+    border-radius: 30px;
+    padding: calc(1% + 5px) calc(3% + 5px);
+    display: inline-block;
+    max-width: calc(85% - 10px);
+    margin-bottom: calc(1% + 5px);
+    word-wrap: break-word;
+    font-size: calc(2.5rem + 1vw);
+    border: 2px solid #3fd152;
+}
+
+.bot-message {
+    background-color: #46544a;
+    color: #d1d5db;
+    float: left;
+    clear: both;
+}
+
+.user-message {
+    background-color: #3fd152;
+    color: #fff;
+    float: right;
+    clear: both;
+}
+
+.user-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(2.5% + 15px);
+    background-color: #2c372b;
+    position: absolute;
+    left: 50%;
+    bottom: calc(5vh);
+    transform: translateX(-50%) translateY(5%);
+    width: calc(98% - 20px);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.user-input-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(10px + 1%);
+    padding: calc(1.6% + 10px);
+    background-color: #2c372b;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+    border-radius: 10px;
+    text-align: center;
+}
+
+    .user-input-footer a {
+        color: #3fd152;
+        text-decoration: none;
+        font-size: calc(1.5rem + 1vw);
+        transition: color 0.3s ease;
+    }
+
+        .user-input-footer a:hover {
+            color: #258f33;
+        }
+
+input[type="text"] {
+    flex: 1;
+    padding: calc(1% + 5px) calc(3% + 5px);
+    border: none;
+    border-radius: 20px;
+    margin-right: calc(1% + 5px);
+    background-color: #3e4a3f;
+    color: #fff;
+    border: 2px solid #3fd152;
+    font-size: calc(2rem + 1vw);
+}
+
+    input[type="text"]::placeholder {
+        color: #a0a0a0;
+    }
+
+button {
+    padding: calc(1% + 5px) calc(3% + 5px);
+    background-color: #3fd152;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: calc(2rem + 1vw);
+}
+
+    button:hover {
+        background-color: #258f33;
+    }
+
+.header {
+    position: absolute;
+    top: calc(5px + 1%);
+    right: calc(10px + 1%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.header-button {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: calc(0.5rem + 1vw);
+    cursor: pointer;
+    padding: calc(2px + 0.5%);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    .header-button:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2c372b;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 16px;
+    bottom: 100%; /* THESE TWO LINES CAUSE DROPDOWN TO GO UP, DO NOT REMOVE */
+    margin-bottom: 8px;
+}
+
+    .dropdown-content a {
+        color: #3fd152;
+        background-color: #2c372b;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+.dropdown a:hover {
+    color: #258f33;
+}
+
+.show {
+    display: block;
+}
