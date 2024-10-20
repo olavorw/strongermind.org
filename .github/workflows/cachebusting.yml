@@ -17,14 +17,15 @@ jobs:
 
       - name: Update asset URLs with commit hash
         run: |
-          sed -i "s/device.js?v=.*/device.js?v=$COMMIT_HASH/" index.html
-          sed -i "s/m.index.css?v=.*/m.index.css?v=$COMMIT_HASH/" device.js
-          sed -i "s/index.css?v=.*/index.css?v=$COMMIT_HASH/" device.js
+          sed -i "s/{{commit_hash}}/$COMMIT_HASH/" index.html
+          sed -i "s/{{commit_hash}}/$COMMIT_HASH/" device.js
+          sed -i "s/{{commit_hash}}/$COMMIT_HASH/" device.js
 
       - name: Push changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add index.html
+          git add device.js
           git commit -m "Cache busting for commit $COMMIT_HASH"
           git push
