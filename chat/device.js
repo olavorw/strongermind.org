@@ -4,14 +4,14 @@ if (isMobile) {
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'm.chat.css?v=2.2.6';
+    link.href = 'm.chat.css?v=3.0.0';
     head.appendChild(link);
 } else {
     var head = document.getElementsByTagName('HEAD')[0];
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'chat.css?v=2.1.5';
+    link.href = 'chat.css?v=3.0.0';
     head.appendChild(link);
 }
 // Test Test
