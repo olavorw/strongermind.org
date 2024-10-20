@@ -4,13 +4,13 @@ if (isMobile) {
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'm.chat.css?v=1.2.1';
+    link.href = 'm.chat.css?v=1.2.2';
     head.appendChild(link);
 } else {
     var head = document.getElementsByTagName('HEAD')[0];
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'chat.css?v=1.1.1';
+    link.href = 'chat.css?v=1.1.2';
     head.appendChild(link);
 }
