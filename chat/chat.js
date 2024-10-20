@@ -148,18 +148,14 @@ window.onclick = function(event) {
 
 
 
-teal = document.getElementById("teal");
-blue = document.getElementById("blue");
-green = document.getElementById("green");
+function changeCSS(cssFile, cssLinkIndex) {
 
-teal.onclick = function() {
-	return null;
-}
+    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
 
-blue.onclick = function() {
-	return null;
-}
+    var newlink = document.createElement("link");
+    newlink.setAttribute("rel", "stylesheet");
+    newlink.setAttribute("type", "text/css");
+    newlink.setAttribute("href", cssFile);
 
-green.onclick = function() {
-	return null;
+    document.getElementsByTagName("head").item(cssLinkIndex).replaceChild(newlink, oldlink);
 }
