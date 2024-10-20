@@ -128,9 +128,15 @@ document.getElementById('userInput').addEventListener('keydown', function (event
 });
 
 
-var a = document.getElementById("dropbtn");
+var a = document.getElementById("themeselector");
 a.onclick = function() {
-	 document.getElementById("items").classList.toggle("show");
+	 document.getElementById("themeselectoritems").classList.toggle("show");
+}
+
+var b = document.getElementById("policyselector")
+
+b.onclick = function () {
+	document.getElementById("policyselectoritems").classList.toggle("show");
 }
 
 window.onclick = function(event) {
@@ -159,3 +165,4 @@ function changeCSS(cssFile, cssLinkIndex) {
 
     document.getElementsByTagName("head").item(cssLinkIndex).replaceChild(newlink, oldlink);
 }
+

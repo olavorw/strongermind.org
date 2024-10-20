@@ -18,16 +18,22 @@
             <button onclick="sendMessage()">Send</button>
         </div>
         <div class="user-input-footer">
-            <a href="https://strongermind.org/policies/privacy-policy">Privacy Policy </a>
-            <a href="https://strongermind.org/policies/terms-of-service">Terms Of Service </a>
+            <div class="dropdown">
+                <div id="policyselectoritems" class="dropdown-content">
+                    <a href="https://strongermind.org/policies/privacy-policy">Privacy Policy </a>
+                    <a href="https://strongermind.org/policies/terms-of-service">Terms Of Service </a>
+                </div>
+                <a id="policyselector" class="dropbtn">Policies</a>
+            </div>
+            
             <a href="#" onclick="deleteChatHistory(chatId)">Delete Data</a>
 			<div class="dropdown">
-				<div id="items" class="dropdown-content">
+				<div id="themeselectoritems" class="dropdown-content">
 					<a href="#" onclick="changeCSS('../themes/chat/chat-darkteal.css', 0)">Teal</a>
 					<a id="blue">Blue</a>
 					<a href="#" onclick="changeCSS('../themes/chat/chat-darkgreen.css', 0)">Green</a>
 				</div>
-				<a id="dropbtn" class="dropbtn">Change Theme</button>
+				<a id="themeselector" class="dropbtn">Theme</a>
 			</div>
         </div>
     </div>
