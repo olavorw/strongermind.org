@@ -1,1 +1,1 @@
-The Very Cool Therapy Website, strongermind.org, with its patented Therafy. 👍
+The Very Cool Therapy Website, strongermind.org, with its patented Bunjai. 👍
