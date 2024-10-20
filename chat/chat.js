@@ -161,6 +161,10 @@ function changeCSS(cssFile) {
 	for (var i = 0; i < links.length; i++) {
 		if (links[i].getAttribute("rel") === "stylesheet" && links[i].getAttribute("type") === "text/css") {
 			// Replace the stylesheet href with the new one
+			var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+			if (isMobile) {
+				cssFile = 'm.' + cssFile;
+			}
 			links[i].setAttribute("href", cssFile + "?v=" + new Date().getTime());
 			break; // Exit the loop after replacing the first matching link
 		}

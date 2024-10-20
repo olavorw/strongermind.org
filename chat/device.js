@@ -14,5 +14,3 @@ if (isMobile) {
     link.href = 'chat.css?v=3.0.5';
     head.appendChild(link);
 }
-// Test Test
-// Test Test 2
