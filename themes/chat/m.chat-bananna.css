@@ -57,8 +57,8 @@ body {
 }
 
 .bot-message {
-    background-color: #464639;
-    color: #d1d5db;
+    background-color: #f7f7d4;
+    color: #808000;
     float: left;
     clear: both;
 }
@@ -118,8 +118,8 @@ input[type="text"] {
     border: none;
     border-radius: 20px;
     margin-right: calc(1% + 5px);
-    background-color: #464639;
-    color: #fff;
+    background-color: #f7f7d4;
+    color: #808000;
     border: 2px solid #cccc00;
     font-size: calc(2rem + 1vw);
 }
