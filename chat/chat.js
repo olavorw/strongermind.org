@@ -77,7 +77,7 @@ async function deleteChatHistory(chatId) {
 }
 
 async function sendMessage() {
-	const userInput = getUserInput();
+	const userInput = DOMPurify.sanitize(getUserInput());
 	if (userInput.trim() !== '') {
 		document.getElementById('userInput').disabled = true;
 		document.querySelector('button').disabled = true;
@@ -100,7 +100,7 @@ async function sendMessage() {
 				try {
 					const jsonResponse = JSON.parse(data);
 					if (jsonResponse && jsonResponse.response) {
-						const botMessage = jsonResponse.response;
+						const botMessage = DOMPurify.sanitize(jsonResponse.response);
 						addBotMessage(botMessage);
 					} else {
 						addBotMessage("Error: Invalid response format.");
