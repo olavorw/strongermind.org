@@ -15,14 +15,14 @@ body {
     padding: 2%;
     background-color: #2d5353;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    height: 90vh;
+    height: 86vh;
     width: 90%;
     max-width: 75rem;
     position: absolute;
 }
 
 .chat {
-    margin-bottom: 2%;
+    margin-bottom: 2vh;
     overflow-y: auto;
     max-height: 94%; /* WARNING: You need this or messages will overflow! Don't remove this please! -Olav */
     padding-right: 20px; /* Add padding to create a gap between the scrollbar and chat messages */

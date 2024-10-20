@@ -15,14 +15,14 @@ body {
     padding: 2%;
     background-color: #2d5353;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    height: 90vh;
+    height: 86vh;
     width: 90%;
     max-width: 75rem;
     position: absolute;
 }
 
 .chat {
-    margin-bottom: 2%;
+    margin-bottom: 2vh;
     overflow-y: auto;
     max-height: 94%; /* WARNING: You need this or messages will overflow! Don't remove this please! -Olav */
     padding-right: 20px; /* Add padding to create a gap between the scrollbar and chat messages */
@@ -166,43 +166,47 @@ button {
 /* Dropdown CSS */
 
 .dropbtn {
-	color: #00e6e6;
-	padding: 16px;
-	font-size: 16px;
-	background:none;
-	border:none;
-	margin:0;
-	padding:0;
-	cursor: pointer;
+    color: #00e6e6;
+    padding: 16px;
+    font-size: 16px;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
 }
 
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  border-radius: 16px;
-  bottom: 100%; /* THESE TWO LINES CAUSE DROPDOWN TO GO UP, DO NOT REMOVE */
-  margin-bottom: 8px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 16px;
+    bottom: 100%; /* THESE TWO LINES CAUSE DROPDOWN TO GO UP, DO NOT REMOVE */
+    margin-bottom: 8px;
 }
 
-.dropdown-content a {
-  color: #00e6e6;
-  background-color: #1b3232;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+    .dropdown-content a {
+        color: #00e6e6;
+        background-color: #1b3232;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+.dropdown a:hover {
+    color: #008080;
 }
 
-.dropdown a:hover {color: #008080;}
-
-.show {display: block;}
+.show {
+    display: block;
+}
