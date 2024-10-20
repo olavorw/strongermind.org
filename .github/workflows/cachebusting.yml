@@ -1,1 +1,30 @@
+name: Cache Busting
 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  cache-busting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate commit hash
+        run: echo "COMMIT_HASH=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+      - name: Update asset URLs with commit hash
+        run: |
+          sed -i "s/device.js?v=.*/device.js?v=$COMMIT_HASH/" index.html
+          sed -i "s/m.index.css?v=.*/m.index.css?v=$COMMIT_HASH/" device.js
+          sed -i "s/index.css?v=.*/index.css?v=$COMMIT_HASH/" device.js
+
+      - name: Push changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add index.html
+          git commit -m "Cache busting for commit $COMMIT_HASH"
+          git push
