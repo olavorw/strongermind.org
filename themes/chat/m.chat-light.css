@@ -11,7 +11,7 @@ body {
 }
 
 .chat-container {
-    border-radius: 15px;
+    border-radius: 25px;
     padding: calc(3% + 10px);
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -26,10 +26,13 @@ body {
     margin-bottom: calc(1% + 5px);
     overflow-y: auto;
     max-height: calc(85% - 10px);
+    padding-right: 20px;
 }
 
     .chat::-webkit-scrollbar {
         width: 12px;
+        position: absolute;
+        right: -12px;
     }
 
     .chat::-webkit-scrollbar-track {
@@ -42,6 +45,22 @@ body {
         border: 3px solid #d9d9d9;
     }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
 .chat-message {
     border-radius: 10px;
     padding: calc(1% + 5px) calc(3% + 5px);
@@ -49,9 +68,9 @@ body {
     max-width: calc(85% - 10px);
     margin-bottom: calc(1% + 5px);
     word-wrap: break-word;
-    font-size: calc(1.2rem);
+    font-size: calc(2.5rem + 1vw);
     border: 2px solid #d9d9d9;
-    max-width: 45%;
+    max-width: 70%;
 }
 
 .bot-message {
@@ -59,7 +78,7 @@ body {
     color: #131313;
     float: left;
     clear: both;
-    align-content: start;
+    align-self: flex-start;
 }
 
 .user-message {
@@ -67,7 +86,7 @@ body {
     color: #fff;
     float: right;
     clear: both;
-    align-content: end;
+    align-self: flex-end;
 }
 
 .user-input {
@@ -116,12 +135,12 @@ input[type="text"] {
     flex: 1;
     padding: calc(1% + 5px) calc(3% + 5px);
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     margin-right: calc(1% + 5px);
     background-color: #f2f2f2;
     color: #000;
     border: 2px solid #d9d9d9;
-    font-size: calc(1.2rem);
+    font-size: calc(2rem + 1vw);
 }
 
     input[type="text"]::placeholder {
@@ -133,9 +152,9 @@ button {
     background-color: #404040;
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: calc(1.2rem);
+    font-size: calc(2rem + 1vw);
 }
 
     button:hover {
@@ -179,6 +198,7 @@ button {
     cursor: pointer;
 }
 
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -193,7 +213,7 @@ button {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border-radius: 16px;
-    bottom: 100%;
+    bottom: 100%; /* THESE TWO LINES CAUSE DROPDOWN TO GO UP, DO NOT REMOVE */
     margin-bottom: 8px;
 }
 
@@ -211,20 +231,4 @@ button {
 
 .show {
     display: block;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px)
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0)
-    }
-}
-
-.fade-in {
-    animation: fadeIn 0.5s ease-in-out;
 }
