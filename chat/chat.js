@@ -126,3 +126,40 @@ document.getElementById('userInput').addEventListener('keydown', function (event
 		sendMessage();
 	}
 });
+
+
+var a = document.getElementById("dropbtn");
+a.onclick = function() {
+	 document.getElementById("items").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i]; // finds all open dropdowns and closes them
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+
+teal = document.getElementById("teal");
+blue = document.getElementById("blue");
+green = document.getElementById("green");
+
+teal.onclick = function() {
+	return null;
+}
+
+blue.onclick = function() {
+	return null;
+}
+
+green.onclick = function() {
+	return null;
+}

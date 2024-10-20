@@ -3,7 +3,7 @@
     <title>Therafai</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../assets/images/therafai/favicon.ico?v=1.0.2" type="image/x-icon">
-    <script src="./device.js?v=1.2.2"></script>
+    <script src="./device.js?v=1.2.3"></script>
     <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.10/dist/purify.min.js"></script>
 </head>
 <body>
@@ -21,9 +21,17 @@
             <a href="https://strongermind.org/policies/privacy-policy">Privacy Policy </a>
             <a href="https://strongermind.org/policies/terms-of-service">Terms Of Service </a>
             <a href="#" onclick="deleteChatHistory(chatId)">Delete Data</a>
+			<div class="dropdown">
+				<div id="items" class="dropdown-content">
+					<a id="teal">Teal</a>
+					<a id="blue">Blue</a>
+					<a id="green">Green</a>
+				</div>
+				<a id="dropbtn" class="dropbtn">Change Theme</button>
+			</div>
         </div>
     </div>
-	<script src="./chat.js?v=1.0.6"></script>
+	<script src="./chat.js?v=1.0.7"></script>
 </body>
 </html>
 <!--
