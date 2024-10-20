@@ -10,7 +10,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #6fa196 0%, #7bb0a5 100%);
+    background: linear-gradient(135deg, #6fa69f 0%, #3e8c89 100%);
 }
 
 /* Hero Section Styling */
@@ -35,14 +35,14 @@ body {
 
     .text-content h1 {
         font-size: 2.5rem;
-        color: #36695e;
+        color: #3e8c89;
         margin-bottom: 10px;
     }
 
     .text-content p {
         margin-top: 15px;
         font-size: 1rem;
-        color: #36695e;
+        color: #3e8c89;
         line-height: 1.5;
         padding-bottom: 15px;
     }
@@ -69,7 +69,7 @@ button {
     cursor: pointer;
     border: 2px solid;
     border-radius: 10px;
-    background: #36695e;
+    background: #3e8c89;
     color: white;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -137,12 +137,12 @@ button {
 .delete-data-link {
     text-align: center;
     text-decoration: none;
-    color: #36695e;
+    color: #cef5ed;
     font-weight: 500;
     font-size: 14px;
     cursor: pointer;
     padding: 5px 10px;
-    border: 1px solid #36695e;
+    border: 1px solid #cef5ed;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
