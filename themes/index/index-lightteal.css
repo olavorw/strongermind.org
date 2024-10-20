@@ -15,56 +15,55 @@ body {
 
 /* Hero Section Styling */
 .hero-section {
-    margin-top: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    padding: 40px 15px;
-    gap: 30px;
+    padding: 50px 20px;
+    gap: 40px;
 }
 
 .text-content {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     box-shadow: 0px 5px 15px rgba(0, 2, 0, 0.5);
-    padding: 15px;
+    padding: 20px;
     background-color: #cef5ed;
     border-radius: 15px;
 }
 
     .text-content h1 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         color: #36695e;
         margin-bottom: 10px;
     }
 
     .text-content p {
-        margin-top: 15px;
-        font-size: 1rem;
-        color: #36695e;
+        margin-top: 20px;
+        font-size: 1.1rem;
+        color: #334a45;
         line-height: 1.5;
-        padding-bottom: 15px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        color: #36695e;
     }
 
 .image-container {
     margin-top: -2%;
-    text-align: center;
 }
 
     .image-container img {
-        text-align: center;
         max-width: 100%;
         height: auto;
         border-radius: 20px;
-        padding: 15px;
+        padding: 20px;
     }
 
 /* Button Styling */
 button {
-    width: 180px;
-    padding: 12px;
-    font-size: 16px;
+    width: 200px;
+    padding: 15px;
+    font-size: 18px;
     font-weight: 700;
     cursor: pointer;
     border: 2px solid;
@@ -89,53 +88,37 @@ button {
     color: #0288d1;
 }
 
-/* Responsive Styling for Mobile */
-@media (max-width: 768px) {
+/* Responsive Styling for Larger Screens */
+@media (min-width: 768px) {
     .hero-section {
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        padding: 30px 20px;
-        gap: 20px;
-        height: auto;
+        text-align: left;
+        padding: 80px 100px;
+        gap: 0;
     }
 
     .text-content {
-        max-width: 100%;
+        max-width: 45%;
+        background-color: #cef5ed;
     }
 
     .image-container {
-        max-width: 100%;
-        margin-left: 10px;
-    }
-
-    .text-content h1 {
-        font-size: 2rem;
-    }
-
-    .text-content p {
-        font-size: 0.95rem;
-    }
-
-    button {
-        width: 160px;
-        padding: 10px;
-        font-size: 15px;
+        max-width: 45%;
+        margin-left: 30px;
     }
 }
 
 /* Header and Link Styling */
 .header {
-    margin-bottom: 300px;
     position: absolute;
-    top: 10px;
-    right: 50px;
+    top: 15px;
+    right: 10px;
     font-family: 'Roboto', sans-serif;
-    text-align: center;
 }
 
 .delete-data-link {
-    text-align: center;
     text-decoration: none;
     color: #36695e;
     font-weight: 500;
@@ -157,14 +140,17 @@ button {
     font-size: 0.8em;
     color: #8A8A8A;
     position: relative;
-    margin-top: 2em;
+    margin-top: 4em;
 }
 
     .note::after {
         content: '';
         width: 20%;
         height: 2px;
-        border-radius: 999px
+        border-radius: 999px;
+        position: absolute;
+        top: -1.8em;
+        left: 0;
     }
 
 .scroller {
