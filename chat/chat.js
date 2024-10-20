@@ -165,7 +165,7 @@ function changeCSS(cssFile) {
 			if (isMobile) {
 				cssFile = 'm.' + cssFile;
 			}
-			links[i].setAttribute("href", cssFile + "?v=" + new Date().getTime());
+			links[i].setAttribute("href", "../themes/chat/" + cssFile + "?v=" + new Date().getTime());
 			break; // Exit the loop after replacing the first matching link
 		}
 	}
