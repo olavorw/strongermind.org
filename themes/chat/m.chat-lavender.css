@@ -124,7 +124,7 @@ body {
     }
 
         .user-input-footer a:hover {
-            color: #c0c0f2; /* Match desktop link hover color */
+            color: #8080e5; /* Match desktop link hover color */
         }
 
 input[type="text"] {
@@ -220,7 +220,7 @@ button {
     }
 
 .dropdown a:hover {
-    color: #c0c0f2; /* Match desktop hover effect */
+    color: #8080e5; /* Match desktop hover effect */
 }
 
 .show {

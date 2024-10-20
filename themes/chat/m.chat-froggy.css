@@ -33,13 +33,13 @@ body {
     }
 
     .chat::-webkit-scrollbar-track {
-        background-color: #2d5353;
+        background-color: #e6ffe6;
     }
 
     .chat::-webkit-scrollbar-thumb {
-        background-color: #004d4d;
+        background-color: #008000;
         border-radius: 30px;
-        border: 3px solid #00cccc;
+        border: 3px solid #66ff66;
     }
 
 .chat-message {

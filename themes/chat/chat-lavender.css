@@ -35,13 +35,13 @@ body {
     }
 
     .chat::-webkit-scrollbar-track {
-        background-color: #2d5353; /* Match background of chat container */
+        background-color: #f2f2ff; /* Match background of chat container */
     }
 
     .chat::-webkit-scrollbar-thumb {
-        background-color: #004d4d; /* Match input field background */
+        background-color: #b0b0d3; /* Match input field background */
         border-radius: 30px;
-        border: 3px solid #00cccc; /* Make border match chat container background */
+        border: 3px solid #ccccff; /* Make border match chat container background */
     }
 @keyframes fadeIn {
     0% {
@@ -81,7 +81,7 @@ body {
 
 .user-message {
     background-color: #ccccff;
-    color: #b2b2d1;
+    color: #fff;
     float: right;
     clear: both;
     align-self: flex-end;
@@ -124,7 +124,7 @@ body {
     }
 
         .user-input-footer a:hover {
-            color: #c0c0f2;
+            color: #8080e5;
         }
 
 input[type="text"] {
@@ -222,7 +222,7 @@ button {
     }
 
 .dropdown a:hover {
-    color: #c0c0f2;
+    color: #8080e5;
 }
 
 .show {
