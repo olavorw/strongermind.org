@@ -152,17 +152,14 @@ window.onclick = function(event) {
   }
 }
 
-
-
-function changeCSS(cssFile, cssLinkIndex) {
-
-    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
-
-    var newlink = document.createElement("link");
-    newlink.setAttribute("rel", "stylesheet");
-    newlink.setAttribute("type", "text/css");
-    newlink.setAttribute("href", cssFile);
-
-    document.getElementsByTagName("head").item(cssLinkIndex).replaceChild(newlink, oldlink);
+function changeCSS(cssFile) {
+	// Get all <link> elements with rel="stylesheet"
+	var links = document.getElementsByTagName("link");
+	for (var i = 0; i < links.length; i++) {
+		if (links[i].getAttribute("rel") === "stylesheet" && links[i].getAttribute("type") === "text/css") {
+			// Replace the stylesheet href with the new one
+			links[i].setAttribute("href", cssFile + "?v=" + new Date().getTime());
+			break; // Exit the loop after replacing the first matching link
+		}
+	}
 }
-
