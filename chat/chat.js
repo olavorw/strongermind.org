@@ -11,11 +11,12 @@ function addBotMessage(message) {
 	const chat = chatContainer.querySelector('.chat');
 
 	const botMessage = document.createElement('div');
-	botMessage.classList.add('chat-message', 'bot-message');
+	botMessage.classList.add('chat-message', 'bot-message', 'fade-in');
 	botMessage.innerHTML = `<span class="message">${message}</span>`;
 	chat.appendChild(botMessage);
-	chatContainer.scrollTop = chatContainer.scrollHeight;
-	scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
+
+	// Scroll to the new message smoothly
+	botMessage.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
 
 function addUserMessage(message) {
@@ -24,12 +25,14 @@ function addUserMessage(message) {
 	const chat = chatContainer.querySelector('.chat');
 
 	const userMessage = document.createElement('div');
-	userMessage.classList.add('chat-message', 'user-message');
+	userMessage.classList.add('chat-message', 'user-message', 'fade-in');
 	userMessage.innerHTML = `<span class="message">${message}</span>`;
 	chat.appendChild(userMessage);
-	chatContainer.scrollTop = chatContainer.scrollHeight;
-	scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
+
+	// Scroll to the new message smoothly
+	userMessage.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
+
 
 function getUserInput() {
 	return document.getElementById('userInput').value;

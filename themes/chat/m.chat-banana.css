@@ -44,6 +44,21 @@ body {
         border-radius: 30px;
         border: 3px solid #ffff66;
     }
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
 
 .chat-message {
     border-radius: 10px;
@@ -54,6 +69,7 @@ body {
     word-wrap: break-word;
     font-size: calc(2.5rem + 1vw);
     border: 2px solid #ffff66;
+    max-width: 70%;
 }
 
 .bot-message {
@@ -61,6 +77,7 @@ body {
     color: #808000;
     float: left;
     clear: both;
+    align-self: flex-start;
 }
 
 .user-message {
@@ -68,6 +85,7 @@ body {
     color: #808000;
     float: right;
     clear: both;
+    align-self: flex-end;
 }
 
 .user-input {

@@ -53,6 +53,7 @@ body {
     word-wrap: break-word;
     font-size: 1.2rem;
     border: 2px solid #00e6e6;
+    max-width: 45%;
 }
 
 .bot-message {
@@ -60,6 +61,7 @@ body {
     color: #d1d5db;
     float: left;
     clear: both;
+    align-self: flex-start;
 }
 
 .user-message {
@@ -67,6 +69,7 @@ body {
     color: #fff;
     float: right;
     clear: both;
+    align-self: flex-end;
 }
 
 .user-input {
@@ -206,3 +209,18 @@ button {
 .dropdown a:hover {color: #008080;}
 
 .show {display: block;}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
