@@ -174,4 +174,9 @@ function changeCSS(cssFile) {
 	}
 }
 
-changeCSS(preferredTheme);
+if (preferredTheme) {
+    changeCSS(preferredTheme);
+}
+else {
+    changeCSS('chat-lightteal');
+}
