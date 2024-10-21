@@ -1,6 +1,8 @@
 const chatId = localStorage.getItem('chatId') || generateChatId();
 localStorage.setItem('chatId', chatId);
 
+const cssVersion = '3.0.1';
+
 function generateChatId() {
 	return Math.random().toString(36).substring(2) + Date.now().toString(36);
 }
@@ -168,7 +170,7 @@ function changeCSS(cssFile) {
 			if (isMobile) {
 				cssFile = 'm.' + cssFile;
 			}
-			links[i].setAttribute("href", "../themes/chat/" + cssFile + "?v=" + new Date().getTime());
+			links[i].setAttribute("href", "../themes/chat/" + cssFile + cssVersion;
 			break; // Exit the loop after replacing the first matching link
 		}
 	}
