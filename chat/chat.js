@@ -1,7 +1,7 @@
 const chatId = localStorage.getItem('chatId') || generateChatId();
 localStorage.setItem('chatId', chatId);
 
-const cssVersion = '3.0.1';
+const cssVersion = '3.0.3';
 
 function generateChatId() {
     return Math.random().toString(36).substring(2) + Date.now().toString(36);
