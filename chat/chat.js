@@ -134,8 +134,8 @@ document.getElementById('userInput').addEventListener('keydown', function (event
 
 
 var a = document.getElementById("themeselector");
-a.onclick = function() {
-	 document.getElementById("themeselectoritems").classList.toggle("show");
+a.onclick = function () {
+	document.getElementById("themeselectoritems").classList.toggle("show");
 }
 
 var b = document.getElementById("policyselector")
@@ -144,17 +144,17 @@ b.onclick = function () {
 	document.getElementById("policyselectoritems").classList.toggle("show");
 }
 
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i]; // finds all open dropdowns and closes them
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
+window.onclick = function (event) {
+	if (!event.target.matches('.dropbtn')) {
+		var dropdowns = document.getElementsByClassName("dropdown-content");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+			var openDropdown = dropdowns[i]; // finds all open dropdowns and closes them
+			if (openDropdown.classList.contains('show')) {
+				openDropdown.classList.remove('show');
+			}
+		}
+	}
 }
 
 function changeCSS(cssFile) {
@@ -175,8 +175,9 @@ function changeCSS(cssFile) {
 }
 
 if (preferredTheme) {
-    changeCSS(preferredTheme);
+	changeCSS(preferredTheme);
 }
 else {
-    changeCSS('chat-lightteal');
+	preferredTheme = 'chat-lightteal';
+	changeCSS(preferredTheme);
 }
