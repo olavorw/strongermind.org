@@ -1,6 +1,8 @@
 const chatId = localStorage.getItem('chatId') || generateChatId();
 localStorage.setItem('chatId', chatId);
 
+let preferredTheme = localStorage.getItem('theme') || 'chat-lightteal';
+
 function generateChatId() {
 	return Math.random().toString(36).substring(2) + Date.now().toString(36);
 }
@@ -166,7 +168,10 @@ function changeCSS(cssFile) {
 				cssFile = 'm.' + cssFile;
 			}
 			links[i].setAttribute("href", "../themes/chat/" + cssFile + "?v=" + new Date().getTime());
+			localStorage.setItem('theme', cssFile);
 			break; // Exit the loop after replacing the first matching link
 		}
 	}
 }
+
+changeCSS(preferredTheme);
