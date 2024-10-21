@@ -168,7 +168,7 @@ function changeCSS(cssFile) {
 			// Replace the stylesheet href with the new one
 			var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 			if (isMobile) {
-				cssFile = 'm.' + cssFile;
+				cssFile = 'm.' + cssFile);
 			}
 			links[i].setAttribute("href", "../themes/chat/" + cssFile + cssVersion;
 			break; // Exit the loop after replacing the first matching link
