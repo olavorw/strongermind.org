@@ -1,8 +1,6 @@
 const chatId = localStorage.getItem('chatId') || generateChatId();
 localStorage.setItem('chatId', chatId);
 
-let preferredTheme = localStorage.getItem('theme') || 'chat-lightteal';
-
 function generateChatId() {
 	return Math.random().toString(36).substring(2) + Date.now().toString(36);
 }
@@ -134,8 +132,8 @@ document.getElementById('userInput').addEventListener('keydown', function (event
 
 
 var a = document.getElementById("themeselector");
-a.onclick = function () {
-	document.getElementById("themeselectoritems").classList.toggle("show");
+a.onclick = function() {
+	 document.getElementById("themeselectoritems").classList.toggle("show");
 }
 
 var b = document.getElementById("policyselector")
@@ -144,17 +142,17 @@ b.onclick = function () {
 	document.getElementById("policyselectoritems").classList.toggle("show");
 }
 
-window.onclick = function (event) {
-	if (!event.target.matches('.dropbtn')) {
-		var dropdowns = document.getElementsByClassName("dropdown-content");
-		var i;
-		for (i = 0; i < dropdowns.length; i++) {
-			var openDropdown = dropdowns[i]; // finds all open dropdowns and closes them
-			if (openDropdown.classList.contains('show')) {
-				openDropdown.classList.remove('show');
-			}
-		}
-	}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i]; // finds all open dropdowns and closes them
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
 
 function changeCSS(cssFile) {
@@ -168,16 +166,7 @@ function changeCSS(cssFile) {
 				cssFile = 'm.' + cssFile;
 			}
 			links[i].setAttribute("href", "../themes/chat/" + cssFile + "?v=" + new Date().getTime());
-			localStorage.setItem('theme', cssFile);
 			break; // Exit the loop after replacing the first matching link
 		}
 	}
-}
-
-if (preferredTheme) {
-	changeCSS(preferredTheme);
-}
-else {
-	preferredTheme = 'chat-lightteal';
-	changeCSS(preferredTheme);
 }
