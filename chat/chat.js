@@ -33,7 +33,6 @@ function addUserMessage(message) {
 	userMessage.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
 
-
 function getUserInput() {
 	return document.getElementById('userInput').value;
 }
@@ -41,6 +40,7 @@ function getUserInput() {
 function clearUserInput() {
 	document.getElementById('userInput').value = '';
 }
+
 function deleteAllCookies() {
 	const cookies = document.cookie.split(';');
 
@@ -53,6 +53,7 @@ function deleteAllCookies() {
 
 	console.log('All cookies deleted');
 }
+
 async function deleteChatHistory(chatId) {
 	if (confirm("Are you sure you want to do that?") == true) {
 		deleteAllCookies()
@@ -130,10 +131,9 @@ document.getElementById('userInput').addEventListener('keydown', function (event
 	}
 });
 
-
 var a = document.getElementById("themeselector");
-a.onclick = function() {
-	 document.getElementById("themeselectoritems").classList.toggle("show");
+a.onclick = function () {
+	document.getElementById("themeselectoritems").classList.toggle("show");
 }
 
 var b = document.getElementById("policyselector")
@@ -142,20 +142,23 @@ b.onclick = function () {
 	document.getElementById("policyselectoritems").classList.toggle("show");
 }
 
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i]; // finds all open dropdowns and closes them
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
+window.onclick = function (event) {
+	if (!event.target.matches('.dropbtn')) {
+		var dropdowns = document.getElementsByClassName("dropdown-content");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+			var openDropdown = dropdowns[i]; // finds all open dropdowns and closes them
+			if (openDropdown.classList.contains('show')) {
+				openDropdown.classList.remove('show');
+			}
+		}
+	}
 }
 
 function changeCSS(cssFile) {
+	// Save selected theme in cookies
+	document.cookie = "selectedTheme=" + cssFile + ";path=/";
+
 	// Get all <link> elements with rel="stylesheet"
 	var links = document.getElementsByTagName("link");
 	for (var i = 0; i < links.length; i++) {
@@ -170,3 +173,16 @@ function changeCSS(cssFile) {
 		}
 	}
 }
+
+// On page load, apply last selected theme if available
+window.onload = function () {
+	var cookies = document.cookie.split(';');
+	for (var i = 0; i < cookies.length; i++) {
+		var cookie = cookies[i].trim();
+		if (cookie.startsWith("selectedTheme=")) {
+			var selectedTheme = cookie.substring("selectedTheme=".length);
+			changeCSS(selectedTheme);
+			break;
+		}
+	}
+};
