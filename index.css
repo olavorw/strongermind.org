@@ -11,6 +11,8 @@
 
 body {
     background: linear-gradient(135deg, #6fa69f 0%, #3e8c89 100%);
+    padding-top: 80px; /* The height of your header */
+    padding-bottom: 70px; /* The height of your footer */
 }
 
 /* Hero Section Styling */
@@ -22,6 +24,7 @@ body {
     height: 100vh;
     padding: 50px 20px;
     gap: 40px;
+    min-height: calc(100vh - 150px); /* 80px header + 70px footer */
 }
 
 .text-content {
@@ -120,7 +123,7 @@ button {
     position: absolute;
     top: 15px;
     right: 10px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .delete-data-link {
@@ -197,7 +200,7 @@ button {
     left: 0;
     width: 100%;
     height: 80px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -214,6 +217,9 @@ button {
     align-items: center;
     gap: 4px;
 }
+    .header a {
+        text-decoration: none;
+    }
 
 .header-logo {
     font-size: 1.5rem;
@@ -262,7 +268,7 @@ button {
     left: 0;
     width: 100%;
     height: 70px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
